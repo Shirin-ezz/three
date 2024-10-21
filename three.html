@@ -1,0 +1,31 @@
+<!-- Problem 3 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 3: Greeting Form</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            function speak(prefix) {
+                let name = $("#nameInput").val();
+                alert(prefix + " " + name);
+            }
+
+            $("#helloButton").click(function() { speak("Hello"); });
+            $("#goodbyeButton").click(function() { speak("Good Bye"); });
+            $("#greetingsButton").click(function() { speak("Greetings"); });
+        });
+    </script>
+</head>
+<body>
+    <form>
+        <label for="nameInput">Enter your name: </label>
+        <input type="text" id="nameInput" name="nameInput" placeholder="Enter your name">
+        <button type="button" id="helloButton">Hello</button>
+        <button type="button" id="goodbyeButton">Good Bye</button>
+        <button type="button" id="greetingsButton">Greetings</button>
+    </form>
+</body>
+</html>
